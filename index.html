@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>웹툰 모아보기 | 네이버웹툰 · 카카오웹툰 장르별 추천</title>
+<meta name="description" content="네이버웹툰과 카카오웹툰의 인기 작품을 한 곳에서 장르별로 모아보는 사이트입니다.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <span class="brand">웹툰 모아보기</span>
+    <span class="updated-at" id="updatedAt"></span>
+  </div>
+</header>
+
+<main>
+  <div class="search-row">
+    <div class="search-box">
+      <input type="search" id="searchInput" placeholder="제목 또는 작가로 검색" aria-label="웹툰 검색">
+      <button id="searchClear" class="search-clear" type="button" hidden aria-label="검색어 지우기">×</button>
+    </div>
+    <button id="favToggle" class="fav-toggle" type="button" aria-pressed="false">☆ 즐겨찾기</button>
+  </div>
+
+  <div class="view-mode" id="viewMode" role="tablist" aria-label="보기 방식">
+    <button class="view-mode-btn is-active" data-mode="genre" role="tab" aria-selected="true">장르별</button>
+    <button class="view-mode-btn" data-mode="weekday" role="tab" aria-selected="false">요일별</button>
+  </div>
+
+  <nav class="genre-tabs" id="genreTabs" aria-label="장르 선택"></nav>
+
+  <div class="platform-filter" id="platformFilter">
+    <button class="filter-btn is-active" data-platform="all">전체</button>
+    <button class="filter-btn" data-platform="naver">네이버웹툰</button>
+    <button class="filter-btn" data-platform="kakao">카카오웹툰</button>
+  </div>
+
+  <section id="cardGrid" class="card-grid"></section>
+
+  <p id="emptyState" class="empty-state" hidden></p>
+</main>
+
+<footer class="site-footer">
+  <p>이 사이트는 네이버웹툰·카카오웹툰이 공개적으로 제공하는 목록 정보를 모아서 보여주는 비공식 소개 페이지이며, 각 작품의 저작권은 원작자와 각 플랫폼에 있습니다. 썸네일 이미지는 원본 서버에서 직접 불러옵니다. 작품을 클릭하면 해당 플랫폼의 원본 페이지로 이동합니다.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
